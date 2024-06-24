@@ -1,9 +1,3 @@
-def es_palindromo(palabra):
-    palabra = palabra.lower().replace(" ", "")
-    return palabra == palabra[::-1]
-
-palabra = input("Introduce una palabra: ")
-if es_palindromo(palabra):
-    print(f"{palabra} es un palíndromo.")
-else:
-    print(f"{palabra} no es un palíndromo.")
+git add palindromo.py
+git commit -m "Añadido script de verificación de palíndromos"
+git push origin main
