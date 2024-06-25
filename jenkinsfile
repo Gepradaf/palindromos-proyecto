@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Build') {
+            steps {
+                // Clonar el repositorio desde GitHub
+                git 'https://github.com/tu-usuario/palindromos-proyecto.git'
+                
+                // Ejecutar el script de verificación de palíndromos
+                sh 'python3 palindromo.py'
+            }
+        }
+        
+        stage('Deploy') {
+            steps {
+                echo 'Despliegue completado' // Cambiar por un paso real de despliegue si es necesario
+            }
+        }
+    }
+}
